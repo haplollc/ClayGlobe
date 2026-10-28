@@ -1,18 +1,15 @@
+# ClayGlobe
+A claymorphic 3D globe for SwiftUI that plants a waving flag on every country you visit.
+
 <p align="center">
   <img src="assets/demo.gif" width="300" alt="ClayGlobe planting waving flags on a claymorphic 3D globe" />
-</p>
-
-<h1 align="center">ClayGlobe</h1>
-
-<p align="center">
-  A claymorphic 3D globe for SwiftUI that plants a waving flag on every country you visit.<br />
-  Spin it, squish it, and let it discover someone's whole travel history from their photo library.
 </p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Swift-5.9+-F05138?logo=swift&logoColor=white" alt="Swift 5.9+" />
   <img src="https://img.shields.io/badge/iOS-17+-000000?logo=apple&logoColor=white" alt="iOS 17+" />
-  <img src="https://img.shields.io/badge/License-MIT-blue" alt="MIT License" />
+  [![GitHub stars](https://img.shields.io/github/stars/haplollc/ClayGlobe?style=flat)](https://github.com/haplollc/ClayGlobe/stargazers)
+  [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 </p>
 
 <p align="center">
@@ -20,6 +17,34 @@
   <br>
   <sub>If ClayGlobe is useful to you, a coffee keeps it going.</sub>
 </p>
+
+**Install**
+
+```swift
+dependencies: [
+    .package(url: "https://github.com/haplollc/ClayGlobe", from: "1.0.0")
+]
+```
+
+**Try it**
+
+```swift
+import SwiftUI
+import ClayGlobe
+
+struct TravelView: View {
+    @StateObject private var globe = GlobeManager(visited: ["USA", "FRA", "JPN"])
+
+    var body: some View {
+        ZStack {
+            GlobeNightSky()
+            ClayGlobeView(manager: globe)
+        }
+    }
+}
+```
+
+If this is useful, a star helps others find it.
 
 ---
 
@@ -180,3 +205,19 @@ ClayGlobe is available under the [MIT license](LICENSE).
 Country and state boundaries are derived from [Natural Earth](https://www.naturalearthdata.com), a public domain map dataset. Flag imagery is rendered from the emoji set of the host OS at runtime; no flag artwork ships with the package.
 
 Made by [Haplo LLC](https://haploapp.com). Extracted from [Bilbo](https://haploapp.com/bilbo), our travel planning app, where the globe fills in as you travel.
+---
+
+## More from Haplo
+
+More open source from [Haplo](https://github.com/haplollc), built by the same solo developer:
+
+- [ThinkingOrbs](https://github.com/haplollc/ThinkingOrbs): dotted, honestly-3D loading indicators for AI and agent interfaces in SwiftUI. Nine hand-tuned designs, two tuned sizes.
+- [Minted](https://github.com/haplollc/Minted): turn any SVG into a physically-lit 3D gold medallion for SwiftUI.
+- [Vesalius](https://github.com/haplollc/Vesalius): a map of your codebase for Claude Code, an on-device code graph with an MCP server, a CLI, a Mac app and a VS Code extension.
+- [MuscleMapKit](https://github.com/haplollc/MuscleMapKit): interactive 3D muscle map for iOS. Shade muscles by how hard they were worked, spin the body, tap a group.
+- [ProcessingField](https://github.com/haplollc/ProcessingField): a SwiftUI progress field, a grid of marks whose sizes describe one soft shape that drifts, folds and breathes while your app is busy.
+- [Gepetto](https://github.com/haplollc/Gepetto): a browser agent for iOS and macOS that a person can take over at any time. Real WKWebView, small on-device models, a native SwiftUI panel.
+- [Mirage](https://github.com/haplollc/Mirage): one-stop on-device diffusion image-generation engine for iOS / macOS / visionOS.
+- [SiriGlass](https://github.com/haplollc/SiriGlass): the Siri drop from iOS 27, for SwiftUI. Liquid Glass that pours out of the Dynamic Island and lights up with your voice.
+- [Scrubbers](https://github.com/haplollc/Scrubbers): twelve sliders you will want to touch, for SwiftUI. One view, one enum.
+- [KoiPond](https://github.com/haplollc/KoiPond): a living koi pond for SwiftUI. Koi glide over any view, lily pads drift on top, and a Metal shader ripples and refracts it all.

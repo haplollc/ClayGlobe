@@ -205,6 +205,7 @@ ClayGlobe is available under the [MIT license](LICENSE).
 Country and state boundaries are derived from [Natural Earth](https://www.naturalearthdata.com), a public domain map dataset. Flag imagery is rendered from the emoji set of the host OS at runtime; no flag artwork ships with the package.
 
 Made by [Haplo LLC](https://haploapp.com). Extracted from [Bilbo](https://haploapp.com/bilbo), our travel planning app, where the globe fills in as you travel.
+
 ---
 
 ## More from Haplo
